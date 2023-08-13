@@ -7,16 +7,18 @@ const config = {
     network: Network.ETH_MAINNET,
 };
 
-// Create a new Quoter instance
+// Create a new Quoter & alchemy instance
 const q = new Quoter(process.env.DEFINE_API_KEY, 1);
-
 const alchemy = new Alchemy(config);
+
+//hashmap for collection names and address
 const collections = {
     "DickButts": "0x42069ABFE407C60cf4ae4112bEDEaD391dBa1cdB",
     "Remilio": "0xD3D9ddd0CF0A5F0BFB8f7fcEAe075DF687eAEBaB",
     "Shiboshis": "0x11450058d796B02EB53e65374be59cFf65d3FE7f",
     "Cyber_KongzBABY": "0x57a204AA1042f6E66DD7730813f4024114d74f37"
     };
+
 const main = async () => {
 
     // Get floor price
@@ -25,8 +27,7 @@ const main = async () => {
     console.log("------------------------------------------")
     console.log(`OpenSea Floor price: ${price.openSea.floorPrice}`);
     console.log(`SudoSwap price: ${askQuotes[0].pool.spotPrice}`)
-    console.log(`LooksRare Floor Price: ${price.looksRare.floorPrice}`);
-    
+    console.log(`LooksRare Floor Price: ${price.looksRare.floorPrice}`); 
     console.log("------------------------------------------")
 };
 
