@@ -9,8 +9,11 @@ lets get started!
 ## installing dependencies
 
 we will bu using node and alchemy:
+
     npm init -y
+
     npm install --save alchemy-sdk
+
     touch main.js
 
 as alchemy doesnt provide endpoint for sudoswap pools
